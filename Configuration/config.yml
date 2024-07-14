@@ -5,17 +5,34 @@ probes:
       - vodka
 
     groups:
-      - name: public_dns
+      - name: Public_DNS
         hosts:
+          - host: 1.1.1.1
+            name: Cloudflare - 1.1.1.1
+            color: orange
+          - host: 9.9.9.9
+            name: Quad9 - 9.9.9.9
+            color: grey
           - host: 8.8.8.8
-            name: Google
+            name: Google - 8.8.8.8
             color: red
           - host: 4.2.2.1
-            name: Level(3)
+            name: Level(3) - 4.2.2.1
             color: blue
-          - host: 1.1.1.1
-            name: Cloudflare
+
+
+      - name: CDN
+        hosts:
+          - host: www.akamai.com
+            name: Akamai - www.akamai.com
+            color: red
+          - host: d3mduebighmd0u.cloudfront.net
+            name: Amazon CloudFront - d3mduebighmd0u.cloudfront.net
+            color: blue
+          - host: updates-http.cdn-apple.com
+            name: Apple CDN - updates-http.cdn-apple.com
             color: orange
+
 
 plugins:
   - name: std_fping
