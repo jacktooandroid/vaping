@@ -20,8 +20,8 @@ probes:
 plugins:
   - name: std_fping
     type: fping
-    count: 1
-    interval: 3s
+    count: 5
+    interval: 5s
     period: 200
     output:
       - vodka
