@@ -20,7 +20,7 @@ probes:
 plugins:
   - name: std_fping
     type: fping
-    count: 10
+    count: 1
     interval: 3s
     period: 200
     output:
@@ -57,7 +57,7 @@ plugins:
 
       - name: http
         type: flask
-        bind: 0.0.0.0:7021
+        bind: 0.0.0.0:8080
         debug: true
         static_url_path: /static
         server: self
